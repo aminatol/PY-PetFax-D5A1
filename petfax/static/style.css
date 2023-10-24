@@ -20,13 +20,13 @@ h1 {
   justify-content: center;
 }
 
-.funfacts {
+.form {
   color: rgb(56, 9, 32);
 }
 
 h2,
-.petFacts,
-.indexMoreButton {
+.pet-facts,
+.view-details{
   display: flex;
   justify-content: center;
 }
@@ -39,7 +39,17 @@ h2,
   display: inline;
   margin-left: 30%;
 }
+.return-link,.add-fact{
+    display: inline;
+    
+}
 
+
+/* .return-link, .add-fact{
+    display: flex;
+    justify-content: center; 
+
+} */
 
 
 input[type="text"],
