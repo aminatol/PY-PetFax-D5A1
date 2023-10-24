@@ -10,11 +10,17 @@ def create_app():
     def hello():  # create index route that goes to '/' and just returns "hello.." as a string
         return 'Hello, PetFax!'
     
+     # register pet blueprint 
+    from . import pet
+    app.register_blueprint(pet.bp)
+   
+    from . import fact
+    app.register_blueprint(fact.bp)
+    
     # @app.route('/pets')
     # def pets():
     #     return 'Hello, These are our pets looking for forever homes'
     # register the pet Blueprint
-    from .import pet
-    app.register_blueprint(pet.bp)
+    
 
     return app  # return app

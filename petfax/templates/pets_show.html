@@ -8,12 +8,12 @@
   </head>
   <body>
   
-    <h2>{{ pet.pet_name }}</h2>
-    <img src="{{ pet.pet_photo }}" alt="Photo of pet" />
+    <h1> Greetings! from {{ pet.pet_name }}</h1>
+    <img src="{{ pet.pet_photo }}" alt="Photo of pet" width="250px" height="250px" />
 
-    <h3> {{pet.pet_fact}}"></h3>
+    <h3 class="pet-fact"> {{pet.pet_fact}}"></h3>
 
     <a href="/pets">Go Back></a>
-    <a href="/pets/facts/new/{{pet.pet_id}}">Add Fact</a>
+    <a href="/pets/facts/new/{{pet.pet_id}}" class="add-fact">Add Fact</a>
   </body>
 </html>
