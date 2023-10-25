@@ -9,18 +9,18 @@ bp = Blueprint('pets', __name__, url_prefix='/pets')
 
 @bp.route('/')
 def index():
-    return render_template('index.html', pets=pets)
+    return render_template('pets/index.html', pets=pets)
 
 
 @bp.route('/<int:pet_id>')
 def show(pet_id):
     pet = pets[pet_id-1]
 
-    return render_template('pets_show.html', pet=pet)
+    return render_template('pets/pets_show.html', pet=pet)
 
 
-@bp.route('facts/new/<int:pet_id>')
-def form(pet_id):
-    pet = pets[pet_id-1]
+# @bp.route('facts/new/<int:pet_id>')
+# def form(pet_id):
+#     pet = pets[pet_id-1]
 
-    return render_template('form.html', pet=pet)
+#     return render_template('facts/form.html', pet=pet)
